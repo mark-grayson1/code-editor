@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Code Editor</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css"
-    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -18,15 +14,28 @@
           <input type="checkbox" id="themeToggle" /> Dark Mode
         </label>
       </div>
+      <label for="languageSelect">
+        Language:
+        <select id="languageSelect">
+          <option value="html" selected>HTML</option>
+          <option value="html-css-js">HTML + CSS + JS</option>
+        </select>
+      </label>
       <div class="editor-wrapper">
         <textarea id="codeInput" placeholder="HTML goes here..."></textarea>
-        <h2>Highlighted Code</h2>
-        <pre><code id="highlightedCode" class="language-html"></code></pre>
+        <textarea
+          id="cssInput"
+          placeholder="CSS goes here..."
+          style="display: none"
+        ></textarea>
+        <textarea
+          id="jsInput"
+          placeholder="JavaScript goes here..."
+          style="display: none"
+        ></textarea>
         <iframe id="preview" src="" title="Live Preview"></iframe>
       </div>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-html.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
