@@ -18,4 +18,8 @@ function updateHighlightedCode(content) {
 
 codeInput.addEventListener("input", updatePreview);
 
+themeToggle.addEventListener("change", () => {
+  document.body.classList.toggle("dark-mode", themeToggle.checked);
+});
+
 updatePreview();
